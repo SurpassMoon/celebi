@@ -13,38 +13,38 @@
           {{ scope.$index }}
         </template>
       </el-table-column>
-      <el-table-column label="Title">
+      <el-table-column label="名称" align="center">
         <template slot-scope="scope">
-          {{ scope.row.title }}
+          {{ scope.row.name }}
         </template>
       </el-table-column>
-      <el-table-column label="Chapter" width="110" align="center">
+      <el-table-column label="日期"  align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.chapter}}</span>
+          <span>{{ scope.row.date}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="Category" width="110" align="center">
+      <el-table-column label="类型"  align="center">
         <template slot-scope="scope">
-          {{ scope.row.category }}
+          {{ scope.row.type }}
         </template>
       </el-table-column>
-      <!-- <el-table-column class-name="status-col" label="Status" width="110" align="center">
+      <el-table-column label="区域"  align="center">
         <template slot-scope="scope">
-          <el-tag :type="scope.row.status | statusFilter">{{ scope.row.status }}</el-tag>
-        </template>
-      </el-table-column> -->
-      <el-table-column align="center" prop="created_at" label="Display_time" width="200">
-        <template slot-scope="scope">
-          <i class="el-icon-time" />
-          <span>{{ scope.row.display_time }}</span>
+          {{ scope.row.area }}
         </template>
       </el-table-column>
+      <el-table-column label="人气"  align="center">
+        <template slot-scope="scope">
+          {{ scope.row.wish }}
+        </template>
+      </el-table-column>
+
     </el-table>
   </div>
 </template>
 
 <script>
-import { getList } from '@/api/test'
+import { getList } from '@/api/movie'
 
 export default {
   filters: {
